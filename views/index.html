@@ -5,45 +5,76 @@
     <title>AP Backend API</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="./css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="main d-flex justify-content-center align-items-center">
-        <!-- <div class="jumbotron"> -->
-            <div class="container">
-                <div class="row">
-                    <div class="main-card col-8 offset-2 card">
-                        <h1 class="text-center">AP Backend Test</h1>
-                        <!-- <p>News fetch and User</p> -->
-                        <br>
-                        <!-- <p><a class="btn btn-primary btn-lg" href="/sharks" role="button">Get Shark Info</a></p> -->
-                        <ul>
-                            <li>
-                                <h4>News Fetch</h4>
-                                <p class="mx-auto p-1 bg-light text-center w-50 rounded">/api/getnews</p>
-                                <p class="ml-3">
-                                    Request body in JSON format: <br>
-                                    { "userName": "user@mail.com", "token" : "A1B2C3D4$"}
-                                </p>
-                            </li>
-                            <li><h4>Update User Read list</h4></li>
-                                <p class="mx-auto p-1 bg-light text-center w-50 rounded">/api/updatereadlist</p>
-                                <p class="ml-3">
-                                    Request body in JSON format: <br>
-                                    { "userName": "user@mail.com", "newsId": "1", "token" : "A1B2C3D4$"}
-                                </p>
-                        </ul>
-                    </div>
-                    <!-- <div class="col text-center">
-                        <h2>Get News</h2>
-                        <p><a class="btn btn-primary btn-lg" href="/api/getnews?project=all" role="button">Get All News</a></p>
-                    </div> -->
+        <div class="container main-content">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>AP Backend Test</h1>
                 </div>
             </div>
-        <!-- </div> -->
+            <br>
+            <div class="row justify-content-around">
+                <div class="main-card col-4 card shadow text-center">
+                    <br>
+                    <h4>News Fetch</h4>
+                    <p class="mx-auto p-1 bg-light text-center w-50 rounded">/api/getnews</p>
+                    <p>POST Request with body in JSON format: </p>
+                    <table>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>userName</td>
+                            <td>john_doe@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>token</td>
+                            <td>A1B2C3D4$</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="main-card col-4 card shadow text-center">
+                    <br>
+                    <h4>Update User Read list</h4>
+                    <p class="mx-auto p-1 bg-light text-center w-50 rounded">/api/updatereadlist</p>
+                    <p>POST Request with body in JSON format: </p>
+                    <table>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>userName</td>
+                            <td>john_doe@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>newsId</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>token</td>
+                            <td>A1B2C3D4$</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <a href="https://github.com/baht2baht/ap-backend-test/">Source Code</a>
+                    <br>
+                    <a href="http://www.kanatat.com/">Kanatat Asipong</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>

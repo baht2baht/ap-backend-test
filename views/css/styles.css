@@ -8,3 +8,17 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
