@@ -1,0 +1,10 @@
+.main {
+    /* background-color: aquamarine; */
+    width: 100vw;
+    height: 90vh;
+}
+
+.main-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

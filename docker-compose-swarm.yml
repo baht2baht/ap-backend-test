@@ -1,0 +1,49 @@
+version: '3.3'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs
+    restart: unless-stopped
+    environment:
+      - MONGO_HOSTNAME=db
+      - MONGO_PORT=27017
+      - MONGO_DB=apbackend
+    ports:
+      - "3000:8080"
+    deploy:
+      replicas: 10
+      restart_policy:
+        max_attempts: 3
+        condition: on-failure       
+      update_config:
+        parallelism: 3
+        delay: 10s    
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    networks:
+      - backend-network-swarm
+    command: ./wait-for.sh db:27017 -- /home/node/app/node_modules/.bin/nodemon app.js 
+
+  db:
+    image: mongo:3.6.19-xenial
+    container_name: db
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:     
+      - "./dbdata:/data/db"
+    networks:
+      - backend-network-swarm
+
+networks:
+  backend-network-swarm:
+    driver: overlay
+
+volumes:
+  dbdata:
+  node_modules:  
