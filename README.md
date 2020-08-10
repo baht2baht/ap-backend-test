@@ -94,6 +94,7 @@ Request Body:
 ```
 
 ---
+
 ###Database Schema
 
 [![AP Backend DB Schema](http://www.kanatat.com/images/ap-backend-db-schema.png "AP Backend DB Schema")](http://www.kanatat.com/images/ap-backend-db-schema.png "AP Backend DB Schema")
