@@ -92,8 +92,9 @@ Request Body:
     "token": "ABCD1234"
 }
 ```
+---
 
-###Database Schema
+### Database Schema
 
 [![AP Backend DB Schema](http://www.kanatat.com/images/ap-backend-db-schema.png "AP Backend DB Schema")](http://www.kanatat.com/images/ap-backend-db-schema.png "AP Backend DB Schema")
 
